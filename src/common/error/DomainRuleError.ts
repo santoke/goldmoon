@@ -1,0 +1,1 @@
+class DomainRuleError extends Error {}
