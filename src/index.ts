@@ -1,8 +1,3 @@
-import Koa from "koa";
+import listen from "./framework/web/app";
 
-const app = new Koa();
-app.use(async (ctx) => {
-  ctx.body = "hello world";
-});
-
-app.listen(3000);
+listen(3000);
