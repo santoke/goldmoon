@@ -1,6 +1,6 @@
-import CreateRoomInput from "../../../../../room/app/port/in/CreateRoomInput";
+import CreateRoomInput from "../../../../../src/room/app/port/in/CreateRoomInput";
 import initializeConfigVariable from "../../../../initializeConfigVariable";
-import ValidationError from "../../../../../error/ValidationError";
+import ValidationError from "../../../../../src/error/ValidationError";
 
 describe("CreateRoomInput", () => {
   beforeAll(() => {

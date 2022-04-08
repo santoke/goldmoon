@@ -1,5 +1,5 @@
-import ConfigVariable from "../../external/ConfigVariable";
-import ValidationError from "../../error/ValidationError";
+import ConfigVariable from "../../src/external/ConfigVariable";
+import ValidationError from "../../src/error/ValidationError";
 
 describe("ConfigVariable", () => {
   const config = ConfigVariable();
