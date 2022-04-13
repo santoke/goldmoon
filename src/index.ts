@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import "./ioc";
-import listen from "./framework/web/app";
+import { listen } from "./framework/web/app";
 
 // TODO : temporary env vars
 process.env = Object.assign(process.env, {
