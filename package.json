@@ -27,12 +27,14 @@
     "@types/jest": "^27.4.1",
     "@types/koa-bodyparser": "^4.3.7",
     "@types/koa__router": "^8.0.11",
+    "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
     "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "eslint": "^8.12.0",
     "jest": "^27.5.1",
     "prettier": "^2.6.2",
+    "supertest": "^6.2.2",
     "tsc-watch": "^5.0.2"
   }
 }
