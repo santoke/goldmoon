@@ -4,6 +4,7 @@
     "experimentalDecorators": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "outDir": "dist"
   },
