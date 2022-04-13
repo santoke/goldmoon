@@ -1,4 +1,5 @@
 import "reflect-metadata";
+import "./ioc";
 import listen from "./framework/web/app";
 
 // TODO : temporary env vars
