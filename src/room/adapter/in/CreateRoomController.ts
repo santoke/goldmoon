@@ -7,14 +7,10 @@ import { Logger, LoggerInterface } from "../../../external/Logger";
 
 @Service()
 export default class CreateRoomController {
-  createRoomService: CreateRoomUseCase;
-
   constructor(
     @Logger() private logger: LoggerInterface,
-    @Inject("CreateRoomService") createRoomService: CreateRoomUseCase
-  ) {
-    this.createRoomService = createRoomService;
-  }
+    @Inject("CreateRoomService") private createRoomService: CreateRoomUseCase
+  ) {}
 
   public createRoom(
     numberOfParticipationUser: number,
