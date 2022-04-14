@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "jest tests",
-    "start": "tsc-watch --onSuccess \"node dist/index.js\""
+    "start": "NODE_ENV=local tsc-watch --onSuccess \"node dist/index.js\""
   },
   "repository": {
     "type": "git",
