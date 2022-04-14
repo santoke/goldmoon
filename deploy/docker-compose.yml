@@ -1,0 +1,9 @@
+mariadb:
+  image: mariadb:10.7.3
+  volumes:
+    - ${DATA_PATH_HOST}/mariadb:/var/lib/mysql
+    - ${DATA_PATH_HOST}/mariadb/conf.d:/etc/mysql/conf.d
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
