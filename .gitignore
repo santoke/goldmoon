@@ -2,3 +2,5 @@
 /.idea/
 /dist/
 /httpRequests/
+/deploy/.data/
+/deploy/.env
