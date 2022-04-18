@@ -1,5 +1,5 @@
-import ConfigVariable from "../../src/external/ConfigVariable";
 import ValidationError from "../../src/error/ValidationError";
+import ConfigVariable from "../../src/external/ConfigVariable";
 
 describe("ConfigVariable", () => {
   const config = ConfigVariable();
@@ -12,7 +12,7 @@ describe("ConfigVariable", () => {
       MAX_TIME_LIMIT_IN_SECONDS: maxTimeLimitInSeconds.toString(),
     });
 
-    expect(config.getMaxNumberRoomParticipation()).toBe(maxNumberRoomParticipation);
+    expect(config.getMaxNumberRoomParticipationUser()).toBe(maxNumberRoomParticipation);
     expect(config.getMaxTimeLimitInSeconds()).toBe(maxTimeLimitInSeconds);
   });
 

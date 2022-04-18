@@ -1,17 +1,17 @@
 import ValidationError from "../error/ValidationError";
 
 interface ConfigVariable {
-  getMinNumberRoomParticipation(): number;
-  getMaxNumberRoomParticipation(): number;
+  getMinNumberRoomParticipationUser(): number;
+  getMaxNumberRoomParticipationUser(): number;
   getMaxTimeLimitInSeconds(): number;
 }
 
 export class EnvironmentConfigVariable implements ConfigVariable {
-  getMinNumberRoomParticipation(): number {
+  getMinNumberRoomParticipationUser(): number {
     return this.getNumberValue("MIN_NUMBER_ROOM_PARTICIPATION");
   }
 
-  public getMaxNumberRoomParticipation(): number {
+  public getMaxNumberRoomParticipationUser(): number {
     return this.getNumberValue("MAX_NUMBER_ROOM_PARTICIPATION");
   }
 

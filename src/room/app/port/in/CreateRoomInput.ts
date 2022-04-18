@@ -2,12 +2,12 @@ import ValidationError from "../../../../error/ValidationError";
 import ConfigVariable from "../../../../external/ConfigVariable";
 
 export default class CreateRoomInput {
-  public readonly numberOfParticipationUser: number;
+  public readonly maxParticipationUsers: number;
   public readonly timeLimitInSeconds: number;
   public readonly userCanChangeDecision: boolean;
 
-  constructor(numberOfParticipationUser: number, timeLimitInSeconds: number, userCanChangeDecision: boolean) {
-    this.numberOfParticipationUser = numberOfParticipationUser;
+  constructor(maxParticipationUsers: number, timeLimitInSeconds: number, userCanChangeDecision: boolean) {
+    this.maxParticipationUsers = maxParticipationUsers;
     this.timeLimitInSeconds = timeLimitInSeconds;
     this.userCanChangeDecision = userCanChangeDecision;
 
@@ -15,11 +15,11 @@ export default class CreateRoomInput {
   }
 
   validate() {
-    if (this.numberOfParticipationUser < ConfigVariable().getMinNumberRoomParticipation()) {
-      throw new ValidationError(`Participation_required_${ConfigVariable().getMinNumberRoomParticipation()}`);
+    if (this.maxParticipationUsers < ConfigVariable().getMinNumberRoomParticipationUser()) {
+      throw new ValidationError(`Participation_required_${ConfigVariable().getMinNumberRoomParticipationUser()}`);
     }
 
-    if (this.numberOfParticipationUser > ConfigVariable().getMaxNumberRoomParticipation()) {
+    if (this.maxParticipationUsers > ConfigVariable().getMaxNumberRoomParticipationUser()) {
       throw new ValidationError("Exceed_maximum_participation_user.");
     }
 
