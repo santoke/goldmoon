@@ -1,5 +1,5 @@
-import CreateRoomInput from "./CreateRoomInput";
+import { CreateRoomDto } from "../out/CreateRoomDto";
 
 export interface CreateRoomUseCase {
-  createRoom(input: CreateRoomInput): void;
+  createRoom(input: CreateRoomDto): void;
 }
