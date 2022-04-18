@@ -4,6 +4,7 @@ import { HttpStatus } from "../../../framework/web/HttpStatus";
 import { ResponseDto } from "../../../framework/web/ResponseDto";
 import CreateRoomInput from "../../app/port/in/CreateRoomInput";
 import { CreateRoomUseCase } from "../../app/port/in/CreateRoomUseCase";
+import { CreateRoomDto } from "../../app/port/out/CreateRoomDto";
 
 @Service()
 export default class CreateRoomController {
@@ -13,13 +14,18 @@ export default class CreateRoomController {
   ) {}
 
   public createRoom(
-    numberOfParticipationUser: number,
+    maxParticipationUsers: number,
     timeLimitInSeconds: number,
     userCanChangeDecision: boolean
   ): ResponseDto {
     try {
-      const createRoomInput = new CreateRoomInput(numberOfParticipationUser, timeLimitInSeconds, userCanChangeDecision);
-      this.createRoomService.createRoom(createRoomInput);
+      const createRoomInput = new CreateRoomInput(maxParticipationUsers, timeLimitInSeconds, userCanChangeDecision);
+      const createRoomDto = new CreateRoomDto(
+        createRoomInput.maxParticipationUsers,
+        createRoomInput.timeLimitInSeconds,
+        createRoomInput.userCanChangeDecision
+      );
+      this.createRoomService.createRoom(createRoomDto);
     } catch (error) {
       this.logger.error(String(error));
       return new ResponseDto(HttpStatus.Conflict);
