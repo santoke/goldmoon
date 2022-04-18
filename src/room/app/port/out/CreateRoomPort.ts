@@ -1,6 +1,6 @@
-import { CreateRoomDto } from "./CreateRoomDto";
 import { RoomEntity } from "../../../domain/RoomEntity";
+import { CreateRoomDto } from "./CreateRoomDto";
 
 export interface CreateRoomPort {
-  createRoom(dto: CreateRoomDto): RoomEntity;
+  createRoom(dto: CreateRoomDto): Promise<RoomEntity>;
 }
