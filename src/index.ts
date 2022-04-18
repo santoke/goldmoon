@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import DataSource from "./framework/orm/DataSource";
+import DataSource from "./framework/orm/OrmDataSource";
 import { listen } from "./framework/web/app";
 import "./ioc";
 
